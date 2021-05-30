@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Rhodium+Libre&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Smritee Neupane</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="header">
+      <div class="name">Smritee Neupane</div>
+      <div class="links">
+        <a href="">Medium</a>
+        <a href="">Instagram</a>
+        <a href="">LinkedIn</a>
+      </div>
+
+<div class="container">
+<div class="left-container">
+  <div class="item">
+    <div class="texts">
+      <a  class="question" id='work' style='    margin-bottom: 0px;
+    margin-left: 40px;'>Work Experience</a>
+            <div style='display: flex;'><a class="question" id='volunteer' style='margin-top: 20px;
+margin-left: -120px;'>Volunteering</a>
+                    <a class="question" id="education" style='margin-top: 20px;
+    margin-left: 20px;'>Education</a>
+                    </div>
+            <a  class="question" id="sample" style='
+    margin-left: -62px;' >Work Samples</a>
+                  <a  class="question" id="participation" style='margin-top: -60px;
+  margin-left: 180px;'>Participation</a>
+                        <a class="dot" style='margin-left: 50px; margin-top:15px;'>...</a>
+      </div>
+      <div class="viewer">
+        <img src="img/viewer.png" class="viewer">
+      </div>
+
+    </div>
+</div>
+  <div class="right-container">
+    <div class="item">
+    <!--  <div class="texts"> -->
+        <div class="answer" id="answer">
+          <div class="heading"><b>Hi I'm Smritee!</b></div>
+          <div class="para"><b>Writer | Storyteller | Software Engineering Student</b></div><br>
+          <div class="para">Apart from my passion for stories, I am equally a tech enthusiast. I like to analyze problems and resolve them, which makes me feel like a superhero.
+<br> <br> And, if my words and actions can serve at least a predicament in this world, then I know I am doing well.
+</div>
+          </div>
+      <!--  </div> -->
+        <div class="speaker">
+          <img src="img/speaker.png" class="speaker">
+          </div>
+      </div>
+  </div>
+</div>
+
+  </body>
+</html>
+<script type="text/javascript">
+
+document.addEventListener('click', function(e) {
+    e = e || window.event;
+if(e.target.classList.contains("question")){
+  var clear_item = document.querySelector(".question.active");
+  if(clear_item!=undefined){
+    clear_item.classList.remove("active");
+  }
+function scroll(){
+  // var xCoord = 0;
+  // var yCoord = 0;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+// window.scrollTo(xCoord, yCoord);
+}
+
+
+var question = event.target;
+if(question.id=='work'){
+scroll();
+
+  document.getElementById("answer").innerHTML = '<div class=heading><b>Creative Content Officer</b></div> Company Name: <b>Women in STEM Nepal</b><br> Internship Dates Employed: <b>Sept 2020 – Nov 2020 </b><br> Employment Duration:<b> 3 months </b><br> ';
+} else if(question.id=='education'){
+  scroll();
+  document.getElementById("answer").innerHTML = '<div class=heading><b>Nepal College of Information Technology</b></div>Degree: <b>Bachelor degree</b>  <br>Field Of Study:  <b>Computer Software Engineering</b>   <br>Dates attended or expected graduation: <b>  2016 – 2021 </b>';
+} else if(question.id=='volunteer'){
+  scroll();
+  document.getElementById("answer").innerHTML = '<div class=heading><b>Facilitator</b></div> Company Name: <b>Canopy Nepal</b> <br> Duration: <b>Sep 2020 – Present</b>  <br><br> As a facilitator, I get to meet and work with like-minded individuals, develop empathetic understanding towards others, working in the field of education, skill and leadership development, diversity and inclusion. With programs like Katha Bunaun and Lekhaun, I facilitate the young learners to better understand stories, have a voice of their own and relate to the world better.<br><br> ';
+
+} else if(question.id=='sample'){
+  scroll();
+  document.getElementById("answer").innerHTML = '<div class=heading><a href="https://smriteeneupane.medium.com/">Smritee Neupane</a></b></div>Medium Magazine<br><div class=heading><a href="https://medium.com/zerone-magazine/oh-how-she-wishes-e23b3c2e2e1e">Oh How She Wishes</a></b></div>Zerone Magazine <br>  <div class=heading><a href="https://offlinethinker.com/a-slight-change-in-the-plan-written-by-smritee-neupane-offline-thinker/">A Slight Change In The Plan</a></b></div>Offline Thinker<br> ';
+}
+else if(question.id=='participation'){
+  scroll();
+  document.getElementById("answer").innerHTML = "<div class=heading><b>5th Batch of Hear My Voice</b></div> Company Name: <b>  Hear My Voice- Women's Network</b> <br> Duration: <b>  Sep 2020 – Oct 2020 </b>  <br><br> Thirteen women across the world passionate about enhancing women's status in their community by having a deep understanding of the issues and laws are gathered together and understand the situation better. I was involved in the Hear My Voice – Women Empowerment Program 5th batch, expanding my knowledge about women’s rights and social justice by discussing them further in a safe space.";
+}
+
+
+
+
+
+
+question.classList.add("active");
+
+}
+});
+
+
+</script>
+<style>
+@media only screen and (max-width: 1100px) {
+  .container{
+    flex-direction: column-reverse;
+  }
+  a#participation {
+    display: table-cell;
+    /* display: table-row; */
+}
+  .item{
+    padding: 10%!important;
+  }
+  .right-container {
+    width: auto!important;
+}
+.left-container {
+    width: auto!important;
+    padding-left: 20%!important;
+}
+.left-container{
+  margin-left: 0px!important;
+margin-right: 0px!important;
+}
+}
+
+.left-container{
+  margin-left: 200px;
+margin-right: -300px;
+}
+
+  .dot:before{
+    border:10px solid grey;
+  }
+  body{
+
+background: #FFF1E6;
+   }
+   .active{
+     color: black!important;
+      background: #9fcdf3!important;
+   }
+   .header{
+     margin-top: 30px;
+   }
+   .heading{
+     font-size: 32px;
+     font-style: bold;
+   }
+   .answer:hover{
+cursor:pointer;
+     transform: skew(1deg, 1deg);
+     /* color: black; */
+     box-shadow: 3px 4px 11px 2px #ececec;
+   }
+   @keyframes example {
+  0% {transform: skew(0deg, 0deg);}
+  50% {transform: skew(0deg, 1deg);}
+  100% {transform: skew(0deg, 0deg);}
+}
+@keyframes example2 {
+0% {transform: skew(0deg, 0deg);}
+50% {transform: translate(5px);}
+100% {transform: skew(0deg, 0deg);}
+}
+@keyframes example3 {
+0% {transform: skew(0deg, 0deg);}
+70% {transform: translate(5px);}
+100% {transform: skew(0deg, 0deg);}
+}
+.speaker{
+animation: example2 4s linear infinite;
+}
+img.viewer {
+  animation: example2 2s linear infinite;
+}
+.answer:hover{
+  animation: none;
+}
+   .answer{
+     width: fit-content;
+     align-items: flex-start;
+     padding: 12px 35px;
+     transition:0.2s linear;
+font-family: Rhodium Libre;
+color: white;
+animation: example 2s linear infinite;
+     background: #D9E5EF;
+     border-radius: 36px;
+ background: #CA9469;
+   }
+   .para{
+     font-size: 18px;
+   }
+   .links a{
+     font-family: Rhodium Libre;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 14px;
+     line-height: 24px;
+ /* identical to box height */
+     color: #000000;
+     cursor: pointer;
+     text-decoration: none;
+     margin-left: 5px;
+     margin-right: 5px;
+   }
+   .name{
+     font-family: Rhodium Libre;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 24px;
+     line-height: 41px;
+ /* identical to box height */
+     letter-spacing: 0.03em;
+     text-align: center;
+     color: #000000;
+   }
+   img.speaker, img.viewer{
+transition: 0.1s linear;
+     width: 211.43px;
+
+   }
+img.viewer:hover{
+    transform: rotate(5deg);
+   }
+   /* .right-container .item:hover img.speaker{
+     transform: rotate(-5deg);
+    } */
+   .texts a:hover {
+       transform: skew(1deg, 1deg);
+       color: black;
+       box-shadow: 3px 4px 11px 2px #ececec;
+   }
+   .texts a:active{
+     background: #9fcdf3;
+          transform: skew(3deg, 2deg);
+   }
+    .texts{
+
+
+      }
+   .texts a{
+     transition: 0.1s linear;
+     display: flex;
+     flex-direction: row;
+     align-items: flex-start;
+     cursor: pointer;
+     padding: 12px 35px;
+     background: #D9E5EF;
+     font-family: Rhodium Libre;
+     text-decoration: none;
+     color: dimgrey;
+     font-size: 20px;
+     border-radius: 36px;
+     height: fit-content;
+     width: fit-content;
+     margin-bottom: 10px;
+   }
+   .container {
+    display: flex;
+}
+
+.left-container {
+    width: 50%;
+}
+
+.right-container {width: 50%;}
+
+.item {
+    padding: 200px;
+}
+
+.speaker {
+    text-align: right;
+}
+
+.links {
+    text-align: center;
+}
+  </style>
